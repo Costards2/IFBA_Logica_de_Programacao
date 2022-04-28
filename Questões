@@ -1,0 +1,97 @@
+  /*1. Dado o tamanho da base e da altura de um retângulo, calcular a sua área e o seu
+perímetro*/
+int main()
+{
+    int base, altura, resultado, perimetro, area;
+    
+    printf("Digite sua altura:\n ");
+    scanf("%i", &altura);
+    
+    printf("Digite sua base:\n ");
+    scanf("%i", &base);
+            
+    perimetro = 2 * base + 2 * altura;
+    printf("Seu perimetro é: %i \n", perimetro);
+    
+    area = base * altura;
+    printf("Sua área é: %i \n", area);
+            
+}
+/*2. Dado o tamanho do lado de um quadrado, calcular a área e o perímetro do mesmo*/
+int main()
+{
+    float lado;
+    float area;
+    float perimetro;
+    
+    printf("Insira o tamanho do lado do seu quadrado:\n");
+    scanf("%f", &lado);
+    
+    area = lado * lado;
+    perimetro = lado * 4;
+    
+    printf("A área cauculada do quadrado é de %.2f\n", area);
+    printf("O perimetro cauculado do quadrado é de %.2f\n", perimetro);
+}
+/*3. Dado o tamanho do raio de uma circunferência, calcular a área e o perímetro da mesma.*/
+int main()
+{
+
+  float raio, perimetro, area;
+  printf("Digite o raio da sua circunferencia: \n");
+  scanf("%f", &raio);
+
+  perimetro = 3.14 * raio;
+  printf(" Seu perimetro é %.2f : \n", perimetro );
+
+  area = 3.14 * (raio * raio);
+  printf("Sua area é %.2f : \n", area);
+}
+/*4. Dado os três lados de um triângulo determinar o perímetro do mesmo.*/
+int main()
+{
+
+  float lado1, lado2, lado3;
+
+  printf("Digite os trés valores dos lados do seu triângulo : \n");
+  scanf("%f %f %f", &lado1, &lado2, &lado3);
+
+  float perimetro = lado3 + lado2 + lado1;
+  printf("Seu perimetro é %.2f : \n", perimetro);
+}
+/*5. Ler um número inteiro e exibir o seu sucessor*/
+int main()
+{
+
+  int numero, sucessor;
+
+  printf("Digite seu número: \n ");
+  scanf("%i", &numero);
+
+  sucessor = numero + 1 ;
+  printf( "O sucessor do seu numero é: %i", sucessor);
+
+}
+/*6. Ler dois números inteiros e exibir o quociente e o resto da divisão inteira entre eles.*/
+int main()
+{
+    int numero1, numero2;
+
+    printf("Digite os seus números em ordem do qual será dividido e o seu divisor:\n");
+    scanf("%i %i", &numero1, &numero2);
+    
+    int quociente = numero1 / numero2;
+    int resto = numero1 % numero2;
+    
+    printf("Seu quociente será: %i \nSeu resto será: %i", quociente, resto);
+}
+/*7. Solicitar a idade de uma pessoa em dias e informar na tela a idade em anos, meses e dias.*/
+int main()
+{
+   int idade, dia, mes, ano;
+   
+   printf("Digite sua idade em dias:");
+   scanf("%i", %idade);
+   
+   
+}
