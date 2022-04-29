@@ -17,6 +17,7 @@ int main()
     printf("Sua área é: %i \n", area);
             
 }
+
 /*2. Dado o tamanho do lado de um quadrado, calcular a área e o perímetro do mesmo*/
 int main()
 {
@@ -33,6 +34,7 @@ int main()
     printf("A área cauculada do quadrado é de %.2f\n", area);
     printf("O perimetro cauculado do quadrado é de %.2f\n", perimetro);
 }
+
 /*3. Dado o tamanho do raio de uma circunferência, calcular a área e o perímetro da mesma.*/
 int main()
 {
@@ -47,6 +49,7 @@ int main()
   area = 3.14 * (raio * raio);
   printf("Sua area é %.2f : \n", area);
 }
+
 /*4. Dado os três lados de um triângulo determinar o perímetro do mesmo.*/
 int main()
 {
@@ -59,6 +62,7 @@ int main()
   float perimetro = lado3 + lado2 + lado1;
   printf("Seu perimetro é %.2f : \n", perimetro);
 }
+
 /*5. Ler um número inteiro e exibir o seu sucessor*/
 int main()
 {
@@ -72,6 +76,7 @@ int main()
   printf( "O sucessor do seu numero é: %i", sucessor);
 
 }
+
 /*6. Ler dois números inteiros e exibir o quociente e o resto da divisão inteira entre eles.*/
 int main()
 {
@@ -85,13 +90,19 @@ int main()
     
     printf("Seu quociente será: %i \nSeu resto será: %i", quociente, resto);
 }
+
 /*7. Solicitar a idade de uma pessoa em dias e informar na tela a idade em anos, meses e dias.*/
 int main()
 {
-   int idade, dia, mes, ano;
+  int idade, dia, mes, ano;
    
-   printf("Digite sua idade em dias:");
-   scanf("%i", %idade);
-   
+printf("Digite sua idade em dias:");
+scanf("%i", &dia);
+
+ano = dia / 365;
+mes = dia /30;
+
+printf("Sua idade em dias é : %i\nSua idade meses é : %i\nSua Idade em anos é : %i", dia, mes, ano);
    
 }
+
