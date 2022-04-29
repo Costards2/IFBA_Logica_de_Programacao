@@ -80,13 +80,13 @@ int main()
 /*6. Ler dois números inteiros e exibir o quociente e o resto da divisão inteira entre eles.*/
 int main()
 {
-    int numero1, numero2;
+   int numero1, numero2;
 
-    printf("Digite os seus números em ordem do qual será dividido e o seu divisor:\n");
-    scanf("%i %i", &numero1, &numero2);
+   printf("Digite os seus números em ordem do qual será dividido e o seu divisor:\n");
+   scanf("%i %i", &numero1, &numero2);
     
-    int quociente = numero1 / numero2;
-    int resto = numero1 % numero2;
+   int quociente = numero1 / numero2;
+   int resto = numero1 % numero2;
     
     printf("Seu quociente será: %i \nSeu resto será: %i", quociente, resto);
 }
@@ -94,15 +94,35 @@ int main()
 /*7. Solicitar a idade de uma pessoa em dias e informar na tela a idade em anos, meses e dias.*/
 int main()
 {
-  int idade, dia, mes, ano;
+   int idade, dia, mes, ano;
    
-printf("Digite sua idade em dias:");
-scanf("%i", &dia);
+   printf("Digite sua idade em dias:");
+   scanf("%i", &dia);
 
-ano = dia / 365;
-mes = dia /30;
+   ano = dia / 365;
+   mes = dia /30;
 
-printf("Sua idade em dias é : %i\nSua idade meses é : %i\nSua Idade em anos é : %i", dia, mes, ano);
+   printf("Sua idade em dias é : %i\nSua idade meses é : %i\nSua Idade em anos é : %i", dia, mes, ano);
    
 }
+
+/*8. Dado que a fórmula para conversão de Fahrenheit para Celsius é C = 5/9 (F – 32), leu um 
+valor de temperatura em Fahrenheit e exibi-lo em Celsius*/
+int main()
+{
+
+   float grausFahrenheit;
+   float grausCelcius;
+   
+   printf("Informe a temperatura em Fahrenheit :\n");
+   scanf("%f", &grausFahrenheit);
+    
+   grausCelcius = (grausFahrenheit - 32)*5/9;
+    
+   printf("A temperatura transformada em Celcius é de: %.2f\n" , grausCelcius);
+    
+}
+
+/*9. Faça um algoritmo que calcule e apresente o valor do volume de uma lata de óleo, dado 
+seu raio e sua altura*/
 
