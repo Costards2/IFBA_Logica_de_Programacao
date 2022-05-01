@@ -1,1 +1,38 @@
-
+/*Sabendo que triângulo é uma figura geométrica de três lados onde cada um dos lados é
+menor que a soma dos outros dois, escreva um programa em C, que receba três valores e
+verifique e imprima se eles podem ser os comprimentos dos lados de um triângulo. */
+int main()
+{
+    int lado1, lado2, lado3, soma1, soma2, soma3;
+    
+    printf("Digite os três valores dos lados (espaçados): ");
+    scanf("%i" "%i" "%i", &lado1, &lado2, &lado3);
+    
+    soma1 = lado1 + lado2;
+    soma2 = lado1 + lado3;
+    soma3 = lado3 + lado2;
+    
+    if (soma1 > lado3){
+        printf("Lado1 e lado2 podem ser os comprimentos dos lados de um triângulo\n");
+    }
+    else 
+    {
+        printf("Lado1 e lado2 não Podem ser os comprimentos dos lados de um triângulo\n");
+    }
+    
+    if (soma2 > lado2){
+        printf("Lado1 e lado3 podem ser os comprimentos dos lados de um triângulo\n");
+    }
+    else 
+    {
+        printf("Lado1 e lado3 não Podem ser os comprimentos dos lados de um triângulo\n"); 
+    }
+    
+    if (soma3 > lado1){
+        printf("Lado3 e lado2 podem ser os comprimentos dos lados de um triângulo\n");
+    }
+    else
+    {
+        printf("Lado3 e lado2 não Podem ser os comprimentos dos lados de um triângulo");
+    }
+}
