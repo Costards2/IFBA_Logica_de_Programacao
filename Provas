@@ -36,3 +36,46 @@ int main()
         printf("Lado3 e lado2 não Podem ser os comprimentos dos lados de um triângulo");
     }
 }
+
+/*Questão IV (3,0)
+O algoritmo ou fórmula de Luhn é um algoritmo para validação de números de
+identificação. O maior uso do algoritmo de Luhn é na validação de números de cartões
+de crédito. Contudo o algoritmo de Luhn pode ser utilizado em sequencia de números de
+tamanho qualquer. Para a verificação do número o algoritmo se baseia nas seguintes
+operações:
+Dada uma sequência de números inteiros positivos (inclusive o dígito verificador), a
+inverta. Em seguida, adicione o primeiro número a um somatório geral. Multiplique o
+segundo número por 2 e execute a operação "noves fora", adicionando o resultado ao
+somatório. Faça o mesmo com os demais números, ou seja ora adicione diretamente o
+número ao somatório, ora o multiplique por 2, realizando "noves fora" e adicionando ao
+somatório.
+Por fim, verifique se o somatório é divisível por 10. Se for, o número é válido. Senão, é
+inválido.Escreva um algoritmo em C que lê um número de até quatro dígitos e verifica se é um
+número de identificação válido de acordo com a fórmula de Luhn e imprima “Número
+Válido”ou “Número Inválido”conforme o caso.*/
+int main()
+{
+    int numero, unidade, dezena, centena, milhar, unidade2, centena2, unidadefinal, centenafinal, somatotal;
+    printf("Digite seu número de 4 digítos: ");
+    scanf("%i", &numero);
+    
+    unidade = numero/1000;
+    dezena = (numero%1000)/100;
+    centena = ((numero%1000)%100)/10;
+    milhar = (((numero%1000)%100)%10)/1;
+    
+    unidade2 = unidade * 2;
+    centena2 = centena * 2;
+    
+    unidadefinal = (unidade2/10) + (unidade2%10);
+    centenafinal = (2/10) + (unidade2%10);
+    
+    somatotal = unidadefinal + dezena + centenafinal + milhar;
+    
+    if (somatotal/10 == 0){
+        printf("Seu valor é válido");
+    }   
+    else{
+         printf("Seu valor é inválido");
+    }
+}
