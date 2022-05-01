@@ -125,4 +125,198 @@ int main()
 
 /*9. Faça um algoritmo que calcule e apresente o valor do volume de uma lata de óleo, dado 
 seu raio e sua altura*/
+ int main()
+{
+    int altura, raio, volume;
+    
+    printf("Digite o valor da altura da lata: ");
+    scanf("%i", &altura);
+    
+    printf("Agora digite o raio da lata: ");
+    scanf("%i", &raio);
+    
+    volume = 3.14 * (raio * raio) * altura;
+    
+    printf("O volume da lata é: %i", volume);
+}
+
+/*10. Converter um inteiro informado menor que 32 para sua representação em binário/
+ int inteiro;
+   {
+   int binario;
+   int bin1, bin2, bin3, bin4, bin5, bin6;
+   int divisao = 0;
+   
+   printf("Digite o número inteiro que você quer transformar em binário: \n");
+   scanf("%d", &inteiro);
+   
+   bin6 = inteiro%2;
+   bin5 = (inteiro/2)%2;
+   bin4 = ((inteiro/2)/2)%2;
+   bin3 = (((inteiro/2)/2)/2)%2;
+   bin2 = ((((inteiro/2)/2)/2)/2)%2;
+   bin1 = (((((inteiro/2)/2)/2)/2)/2)%2;
+   
+   binario = bin1*100000 + bin2*10000 + bin3*1000 + bin4*100 + bin5*10 + bin6;
+   
+   printf("O numero digitado em binário é %d", binario);
+   }
+   
+   /*11. Faça um algoritmo para calcular a nota semestral de um aluno. A nota semestral é obtida 
+pela média aritmética entre a nota de 2 bimestres. Cada nota de bimestre é composta por 
+2 notas de provas. */
+int main()
+{
+   float prova1, prova2, prova3, prova4, bimestre1, bimestre2, semestre;
+   
+    printf("Digite a nota das provas do primeiro bimestre: ");
+    scanf("%f %f", &prova1, &prova2);
+   
+    printf("Digite a nota das provas do segundo bimestre; ");
+    scanf("%f %f", &prova3, &prova4); 
+    
+    bimestre1 = (prova1+prova2)/2;
+    bimestre2 = (prova1+prova2)/2;
+    
+    semestre = (bimestre1 + bimestre2) / 2;
+    
+    printf("Sua média é: %.2f", semestre);
+}
+
+/*12. Faça um algoritmo que transforme uma velocidade fornecida em m/s pelo usuário para 
+Km/h. Para tal, multiplique o valor em m/s por 3,6*/
+int main()
+{
+    float velocidademetros, velocidadekilometros;
+    
+    printf("Digite o valor em m/s : ");
+    scanf("%f", &velocidademetros);
+    
+    velocidadekilometros = velocidademetros * 3.6;
+    
+    printf("A velocidade em km/h é: %.2f", velocidadekilometros);
+}
+
+/*13. Um circuito elétrico é composto de duas resistências R1 e R2 em paralelo, e ambas em 
+sequência de uma resistência R3. Faça um algoritmo para calcular a resistência 
+equivalente desse circuito. */
+int main()
+{
+    float resistencia1, resistencia2, resistencia3, resistenciaequivalente;
+    
+    printf("Digite os valores das resistencias: ");
+    scanf("%f %f %f", &resistencia1, &resistencia2, &resistencia3);
+    
+    resistenciaequivalente = (1/resistencia1 + 1/resistencia2) + resistencia3;
+    
+    printf("A resitencia equivalente é: %.2f", resistenciaequivalente);
+}
+/*14. Em uma cidade se deseja sincronizar os semáforos. Com isto, quando um semáforo abre 
+(fica verde), os veículos que nele estavam parados tendem a encontrar os próximos 
+semáforos também abertos. Para que isto seja feito, os próximos semáforos precisam 
+abrir um pouco depois, dependendo da velocidade permitida na via e da distância entre 
+eles. Assim, ao abrir o semáforo, um veículo começa a acelerar até atingir a velocidade 
+permitida, que mantém até chegar ao próximo semáforo, levando um certo tempo para 
+percorrer essa distância. Para que encontre o próximo semáforo aberto, este deve abrir 
+um pouco antes da chegada do veículo (por ex: 3 segundos antes). Faça assim um 
+algoritmo que informe quanto tempo depois um semáforo deve abrir, dada as seguintes 
+informações: 
+a. a distância desde o semáforo anterior
+b. a velocidade permitida da via
+c. a aceleração típica dos carros*/
+
+/*15. Num dia de sol, você deseja medir a altura de um prédio, porém, a trena não é 
+suficientemente longa. Assumindo que seja possível medir sua sombra e a do prédio no 
+chão, e que você lembre da sua altura, faça um programa para ler os dados necessários e 
+calcular a altura do prédio.*/
+{
+   float alturaPredio, minhaAltura;
+   float sombraPredio, minhaSombra;
+
+   printf("Digite o valor da sua altura: \n");
+   scanf("%f" , &minhaAltura);
+   
+   printf("Digite o valor da sua sombra: \n");
+   scanf("%f" , &minhaSombra);
+   
+   printf("Digite o valor da sombra do prédio: \n");
+   scanf("%f" , &sombraPredio);
+   
+    alturaPredio = (sombraPredio/minhaSombra) * minhaAltura;
+   
+   printf("A altura do prédio é de: %.2f \n", alturaPredio);
+   }
+   
+   /*16. Escreva um programa para gerar o invertido de um número com três algarismos 
+(exemplo: o invertido de 498 é 894).*/
+int main()
+{
+    int numero, unidade, dezena, centena;
+    
+    printf("Digite seu número de três algarismos: ");
+    scanf("%i", &numero);
+    
+    unidade = numero/100;
+    dezena = (numero%100)/10;
+    centena= (numero%100)%10;
+    
+    printf("Seu número invertido é: %i%i%i", centena, dezena, unidade);
+}
+
+/*17. Um programa para gerenciar os saques de um caixa eletrônico deve possuir algum 
+mecanismo para decidir o número de notas de cada valor que deve ser disponibilizado 
+para o cliente que realizou o saque. Um possível critério seria o da "distribuição ótima" 
+no sentido de que as notas de menor valor fossem distribuídas em número mínimo 
+possível. Por exemplo, se a quantia solicitada fosse R$ 87,00, o programa deveria indicar 
+uma nota de R$ 50,00, três notas de R$ 10,00, uma nota de R$ 5,00 e duas notas de R$ 
+1,00. Escreva um programa que receba o valor da quantia solicitada e retorne a
+distribuição das notas de acordo com o critério da distribuição ótima (considere existir 
+notas de R$1,00; R$2,00; R$5,00; R$10,00; R$20,00; R$50,00 e R$100,00).*/
+int main()
+{
+    int valorinteiro, nota1, nota2, nota5, nota10, nota20, nota50, nota100;
+    
+    printf("Digite seu valor inteiro: ");
+    scanf("%i", &valorinteiro);
+    
+    nota100 = valorinteiro/100;
+    nota50 = (valorinteiro%100)/50;
+    nota20 = ((valorinteiro%100)%50)/20;
+    nota10 = (((valorinteiro%100)%50)%20)/10;
+    nota5 = ((((valorinteiro%100)%50)%20)%10)/5;
+    nota2 = (((((valorinteiro%100)%50)%20)%10)%5)/2;
+    nota1 = ((((((valorinteiro%100)%50)%20)%10)%5)%2)/1;
+    
+    printf("O número de notas será de:\n %i notas de 100;\n %i notas de 50;\n %i notas de 20;\n %i notas de 10;\n %i notas de 5;\n %i notas de 2;\n %i notas de 1.", nota100, nota50, nota20, nota10, nota5, nota2, nota1);
+}
+/*18. Escreva um programa que permute o valor de duas variáveis inteiras*/
+int main()
+{
+  int soma, var1, var2;
+  
+  printf("Digite o valor de duas variáveis inteiras respectivamente: ");
+  scanf("%i %i", &var1, &var2);
+  
+  soma = var1 + var2;
+  var1 = soma - var2;
+  var2 = soma - var1;
+  
+  printf("O valor da primeira variavel agora é: %i \n", var1);
+  printf("O valor da segunda variavel agora é: %i \n", var2);
+ }
+ 
+ /*19. Escreva um programa que calcule a raiz de uma equação do primeiro grau.*/
+ 
+ /*20. Uma loja vende seus produtos no sistema entrada mais duas prestações, sendo a entrada 
+maior do que ou igual às duas prestações, as quais devem ser iguais, inteiras e as maiores 
+possíveis. Por exemplo, se o valor da mercadoria for R$ 270,00, a entrada e as duas 
+prestações são iguais a R$ 90,00; se o valor da mercadoria for R$ 302,75, a entrada é de 
+R$ 102,75 e as duas prestações são a iguais a R$ 100,00. Escreva um programa que 
+receba o valor da mercadoria e forneça o valor da entrada e das duas prestações, de 
+acordo com as regras acima. Observe que uma justificativa para a adoção desta regra é 
+que ela facilita a confecção e o consequente pagamento dos boletos das duas prestações.*/
+ 
+
+   
+   
 
