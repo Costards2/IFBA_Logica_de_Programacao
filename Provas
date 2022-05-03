@@ -56,7 +56,7 @@ Válido”ou “Número Inválido”conforme o caso.*/
 int main()
 {
     int numero, unidade, dezena, centena, milhar, unidade2, centena2, unidadefinal, centenafinal, somatotal;
-    printf("Digite seu número de 4 digítos: ");
+    printf("Digite seu número até de 4 digítos: ");
     scanf("%i", &numero);
     
     unidade = numero/1000;
