@@ -113,3 +113,24 @@ int main()
         printf("Seu número é inváalido");
     }
 }
+/*Ao continuar sua jornada, Biu se depara com seu primeiro oponente: um incrível Rattata. Como Biu é bastante calculista, ele pede 
+ajuda a você para descobrir se a sequência de ataques que ele pretende utilizar contra o seu oponente irá derrotá-lo, considerando que seu 
+pokémon não morra antes. 
+No jogo, Biu utilizará apenas três ataques e cada ataque corresponde a um número. Para o Rattata ser derrotado, dos três ataques selecionados 
+por Biu, deve existir:  Um número maior que dez.  Um número par. 
+Caso essas duas condições não forem satisfeitas, o Rattata não será derrotado. Outra observação é que se Biu escolher o ataque de número 
+0, independente se as condições de vitória forem satisfeitas, o Rattata também não será derrotado.*/
+int main()
+{
+    int ataque1, ataque2, ataque3;
+        
+        printf("Digite o valor dos 3 ataques: ");
+        scanf("%i" "%i" "%i", &ataque1, &ataque2, &ataque3);
+        
+        if ((ataque1 > 10 || ataque2 > 10 || ataque3 > 10) && (ataque1 %2 == 0 || ataque2 %2 == 0 || ataque3 %2 == 0  ) && (ataque1 != 0 && ataque2 != 0 && ataque3 != 0)){
+            printf("Você derrotou o Rattata");
+        }else{
+            printf("O Rattata não foi derrotado");
+        }
+}
+
