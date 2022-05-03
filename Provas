@@ -37,8 +37,7 @@ int main()
     }
 }
 
-/*Questão IV (3,0)
-O algoritmo ou fórmula de Luhn é um algoritmo para validação de números de
+/*O algoritmo ou fórmula de Luhn é um algoritmo para validação de números de
 identificação. O maior uso do algoritmo de Luhn é na validação de números de cartões
 de crédito. Contudo o algoritmo de Luhn pode ser utilizado em sequencia de números de
 tamanho qualquer. Para a verificação do número o algoritmo se baseia nas seguintes
