@@ -133,4 +133,108 @@ int main()
             printf("O Rattata não foi derrotado");
         }
 }
+/*Chronos possui um relógio muito antigo e valioso. Contudo, embora seus ponteiros ainda
+funcionem perfeitamente, seus marcadores e números se tornaram ilegíveis. Para a sorte de
+Chronos, o relógio foi construído com um mostrador que indica o valor dos ângulos medidos entre
+os ponteiros de hora e minutos e a posição de repouso, equivalente a 00:00. Assim, quando for
+00:00 o marcador indica de ângulos indica 000 e 000. Às 06:00, o marcador de ângulos, indicará:
+180 e 000. Às 06:30, contudo o valor do marcador de ângulos será: 195 e 180. Você deve escrever
+um programa, que leia os valores do marcador de ângulos e calcule a hora indicada pelo relógio.*/
 
+int main(){
+    
+    int marcadorAnguloHH, marcadorAnguloMM;
+    int hh, mm;
+    
+    printf("Informe os marcadores de angulos :\\> ");
+    scanf("%d %d", &marcadorAnguloHH, &marcadorAnguloMM);
+    
+    hh = marcadorAnguloHH / 30;
+    mm = marcadorAnguloMM / 6;
+    
+    printf("Hora Atual: %02d:%02d\n", hh, mm);
+}
+/*Na álgebra de inteiros foi definida uma nova operação chamada de maximização de inteiros. A
+maximização de dois números inteiros A e B segue as seguintes regras:
+1. Inicialmente fazemos A e B terem o mesmo número de dígitos, adicionando zeros à esquerda
+conforme necessário.
+2. Então cada dígito de A (do menos significativo ao mais significativo) é comparado com o dígito
+correspondente de B. Nesta comparação, o dígito de menor valor é eliminado do número a que
+pertence (se eles são iguais, nenhum é eliminado).
+3. O resultado da operação é a dupla de números formados pelos dígitos remanescentes. Caso não
+haja dígitos remanescentes em um dos números, o equivalente na dupla resultado para este número
+é -1.
+Por exemplo, considere a maximização de 453 e 92. Após o passo 1, teremos: 453 e 092; em
+seguida compara-se 4 > 0; 5 < 9 e 3>2. Será eliminado o 5 do primeiro número e serão eliminados
+o 0 e o 2 do segundo número. A dupla resultado será (43 e 5). 
+Sua tarefa é escrever um programa em C, que calcule a operação maximização para dois inteiros
+entre 0 e 999*/
+int main(){
+    int numA, numB;
+    int res1, res2;
+    int base1, base2;
+    int numeralA, numeralB;
+    
+    res1 = res2 = 0;
+    
+    printf("Informe os dois números :\\> ");
+    scanf("%d %d", &numA, &numB);
+    
+    base1 = base2 = 1;
+    
+    numeralA = numA % 10;
+    numeralB = numB % 10;
+    
+    if(numeralA > numeralB){
+        res1 = numeralA * base1;
+        base1 *= 10;
+    }else if(numeralA < numeralB){
+        res2 = numeralB * base2;
+        base2 *= 10;
+    }else{
+        res1 = numeralA * base1;
+        res2 = numeralB * base2;
+        base1 *= 10;
+        base2 *= 10;
+    }    
+
+    numeralA = (numA % 100) / 10;
+    numeralB = (numB % 100) / 10;
+    
+    if(numeralA > numeralB){
+        res1 += numeralA * base1;
+        base1 *= 10;
+    }else if(numeralA < numeralB){
+        res2 += numeralB * base2;
+        base2 *= 10;
+    }else{
+        res1 += numeralA * base1;
+        res2 += numeralB * base2;
+        base1 *= 10;
+        base2 *= 10;
+    }    
+    
+    numeralA = numA / 100;
+    numeralB = numB / 100;
+    
+    if(numeralA > numeralB){
+        res1 += numeralA * base1;
+        base1 *= 10;
+    }else if(numeralA < numeralB){
+        res2 += numeralB * base2;
+        base2 *= 10;
+    }else{
+        res1 += numeralA * base1;
+        res2 += numeralB * base2;
+        base1 *= 10;
+        base2 *= 10;
+    }      
+
+    if(base1 == 1)
+        res1 = -1;
+    if(base2 == 1)
+        res2= -1;
+    
+    
+    printf("Dupla Resultado: (%03d, %03d)\n", res1, res2);
+}
