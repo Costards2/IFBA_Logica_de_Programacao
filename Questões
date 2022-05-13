@@ -341,6 +341,47 @@ else if ((exameI >= 70 && exameII >= 70) && (exameIII >= 70 || exameIV >= 70)) {
 else {
  printf("Reprovado");
 }
+/*41. Escreva um programa que imprima todos os números inteiros do intervalo fechado de 1 a 
+100.*/
+int main()
+{
+     int numero;
+    numero = 1; 
+        
+        while(numero <= 100){
+            printf("%i ", numero++);
+        }
+}
+/*Outra forma*/
+int main()
+{
+    int numero;
+    numero = 0; 
+        
+        do{
+            printf("%i " ,numero++);
+        }while(numero <= 99);
+}
+/*Outra forma*/
+int main()
+{
+    int numero;
+    
+    for( numero = 1; numero<=100; numero++)
+       printf("%i ", numero);
+}
+/*42. Escreva um programa que imprima todos os números inteiros de 100 a 1 (em ordem 
+decrescente).*/
+int main(){
+
+int numero;
+
+for(numero=100; numero>=1; numero--){
+    printf("%d ", numero);
+    }
+}
+/*43. Escreva um programa que imprima todos os números pares do intervalo fechado de 1 a 
+100.*/
 
 
  
