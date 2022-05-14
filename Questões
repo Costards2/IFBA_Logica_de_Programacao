@@ -386,7 +386,7 @@ int main()
 {
   int num;
     
-    for(num = 0; num <= 100; num+=2)
+    for(num = 2; num <= 100; num+=2)
         printf("%i ", num);
 }
 
