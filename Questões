@@ -390,6 +390,40 @@ int main()
         printf("%i ", num);
 }
 
+/*44. Escreva um programa que imprima todos os números de 1 até 100, inclusive, e a soma 
+de todos eles.*/
+int i;
+   intmain()
+   {
+    int soma = 0;
+    
+    for(i = 1; i <= 100 ; i++){
+      printf("%d \n", i);
+      soma += i;
+    } 
+    
+    printf("A soma é: %i", soma);
+   }
+    
+/*45. Escreva um programa que leia 5 números, e imprima a média entre eles.*/
+int main()
+{
+    float num, total, media;
+    float quantidade;
+    total = 0;
+    
+    
+    for(quantidade = 1; quantidade <= 5; quantidade++){
+        printf("Digite seu número: ");
+        scanf("%f", &num);
+        total = total + num;
+    }
+    media = total/5;
+    printf("Sua média é: %.2f", media);
+}
+/*46. Escreva um programa que calcule o quociente da divisão de A por B (número inteiros e 
+positivos), ou seja, A / B, através de subtrações sucessivas. Esses dois valores são 
+passados pelo usuário através do teclado.*/
  
 
    
