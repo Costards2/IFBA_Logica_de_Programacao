@@ -478,6 +478,37 @@ int main()
 
     printf(" Resultado de Euler = %f", euler);
 }
+/*Questão de dados sala*/
+int main()
+{
+int numero;
+int dado1, dado2;
+
+printf("Digite seu numero: ");
+scanf("%i", &numero);
+    
+    for(dado1 = 1, dado2 = 0; dado1 <= numero - 1;dado1++){
+        dado2 = numero - dado1;
+            printf("%i + %i\n", dado1, dado2);
+}
+}
+/*Outra forma que funciona com mais dados*/
+int main()
+{
+int numero;
+int dado1, dado2;
+
+printf("Digite o seu numero: ");
+scanf("%i", &numero);
+
+for(dado1= 1; dado1 <= 6; dado1++)
+    for(dado2 = 1; dado2 <= 6; dado2++)
+        if(dado1 + dado2 == numero){
+        printf("Dado 1 = %i  ", dado1);
+        printf("Dado 2 = %i\n", dado2);
+        }
+}
+
  
 
    
