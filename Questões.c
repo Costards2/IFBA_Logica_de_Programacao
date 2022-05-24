@@ -508,6 +508,41 @@ for(dado1= 1; dado1 <= 6; dado1++)
         printf("Dado 2 = %i\n", dado2);
         }
 }
+/* Questão de votos em sala*/
+  int main()
+{
+
+    int A = 0;
+    int B = 0;
+    int C = 0;
+    int voto;
+    
+    do{
+    printf("Digite o seu voto 0 para proposta A, 1 para proposta B e 2 para proposta C, Caso queira encerrar o programa digite -1: ");
+    scanf("%i", &voto);
+    
+        if (voto == 0){
+        A += 1;
+        }   
+        else if (voto == 1){
+        B += 1;
+        }
+        else if (voto == 2){
+        C += 1;
+        }
+        else if (voto == -1){
+        break;
+        }
+        else{
+        printf("O VALOR DIGITADO NÂO É VALIDO \n");
+        }
+    
+    }while(voto > 0);
+    
+    printf("A proposta A teve %i \n", A);
+    printf("A proposta B teve %i \n", B);
+    printf("A proposta C teve %i \n", C);
+    }
 
  
 
