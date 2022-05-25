@@ -441,8 +441,28 @@ passados pelo usuário através do teclado.*/int main()
 /*47. Escreva um programa que calcule o resto da divisão de A por B (número inteiros e 
 positivos), ou seja, A % B, através de subtrações sucessivas. Esses dois valores são 
 passados pelo usuário através do teclado.*/
+int main()
+{
+     int A, B, i;
+    
+    
+    printf("Digite o valor de A: "); 
+    scanf("%d", &A);
+    printf("Digite o valor de B: ");
+    scanf("%d", &B);
+    
+    int auxA = A;
+    
+    for(i = 1; B <= auxA; i++){
+        auxA -= B;
+    }
+    int resto = auxA;
+    
+     printf("Seu resto é: %i", resto);
+    
+}
 
-/*Questão Fatorial da sala*/
+  /*Questão Fatorial da sala*/
 int main()
 {
     int i;
@@ -458,6 +478,57 @@ int main()
 
     printf(" %d! = %d", valor, fatorial);
 }
+
+/*48. e 49. Escreva um programa que determine se um dado número N (digitado pelo usuário) é 
+primo ou não.
+int main()
+{
+    int i;
+    int num;
+    int divisivel = 0 ;
+    
+    printf("Digite o numero que você quer avaliar: ");
+    scanf("%i", &num); 
+
+
+    for(i = 2; i <= num ; i++){
+        if (num % i == 0){
+            divisivel++;
+        }
+    }
+    
+    if (divisivel == 1){
+        printf("O número é primo");
+    } else {
+        printf("O número não é primo");
+    }
+
+}
+/*Outra forma que eu fiz*/
+  
+  int main()
+{
+    int i;
+    int num;
+    
+    printf("Digite o numero que você quer avaliar: ");
+    scanf("%i", &num); 
+
+    for(i = 1; i <= num ; i++){
+       num % 2;
+    }
+    
+     for(i = 1; i <= num ; i++){
+       num / 2;
+    }
+    
+    if (num % 2 == 1 || num == 2 ){
+        printf("O número é primo");
+    } else {
+        printf("O número não é primo");
+    }
+}
+  
 /*59. O número e (número de Euler) pode ser representado e calculado por meio da utilização da série de Taylor para e quando x=1, como a soma da 
 seguinte série infinita: 𝑒 = 1 + (1/1!) + (1/2!) + (1/3!) + ... + (1/n!) Escreva um programa, que leia o número de termos da série (n) e imprima
 como saída, o cálculo do número de Euler para cada um dos n primeiros elementos da série.*/
@@ -478,7 +549,17 @@ int main()
 
     printf(" Resultado de Euler = %f", euler);
 }
-/*Questão de dados sala*/
+
+/*50. Escreva um programa que leia um valor e imprima todas as possíveis combinações em 
+que o lançamento de um par de dados tenha como resultado da soma dos valores dos 
+dados o número lido. Por exemplo, se a entrada for o número 7, o programa deve 
+imprimir as seguintes combinações: 
+• 1 6
+• 2 5
+• 3 4
+• 4 3
+• 5 2
+• 6 1*/
 int main()
 {
 int numero;
