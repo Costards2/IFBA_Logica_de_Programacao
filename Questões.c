@@ -658,6 +658,62 @@ Efetuando a soma destes números obtemos o resultado 284 (1 + 2 + 4 + 5 + 10 + 1
 efetuando a soma destes números obtemos o resultado 220 (1 + 2 + 4 + 71 + 142 = 220). 
 Escreva um programa que dado dois inteiros, verifique se eles são amigos. (17296 e 
 18416 são amigos, por exemplo).*/
+  int main()
+{
+    int divisores;
+    int valor1 = 0, valor2 =0;
+    int i, j;
+    int soma1 = 0 ,soma2 = 0;
+    
+    printf("Digite o 2 valores para descobir se eles são números amigos : \n");
+    scanf("%d %d", &valor1, &valor2); 
+    
+    for(i = 1; valor1 > i; i++){
+        if(valor1 % i == 0){
+            soma1 += i;
+        }
+        
+    }
+    for(j = 1; valor2 > j; j++){
+        if(valor2 % j == 0){
+            soma2 += j;
+        }
+    }
+    
+    if(valor1 == soma2 && valor2 == soma1){
+        printf("Eles são amigos");
+    }else{
+        printf("Eles não são amigos");
+    }
+}
+/*56. Um número se diz perfeito se é igual à soma de seus divisores próprios. Divisores 
+próprios de um número positivo N são todos os divisores inteiros positivos de N exceto o 
+próprio N. Por exemplo, o número 6, seus divisores próprios são 1, 2 e 3, cuja soma é 
+igual à 6 (1 + 2 + 3 = 6). Outro exemplo é o número 28, cujos divisores próprios são 1, 2, 
+4, 7 e 14, e a soma dos seus divisores próprios é 28 (1 + 2 + 4 + 7 + 14 = 28).*/
+  int main()
+{
+    int divisores;
+    int valor;
+    int i, j;
+    int soma = 0;
+    
+    printf("Digite o seu número : \n");
+    scanf("%i", &valor);
+    
+    for(i = 1; valor > i; i++){
+        if(valor % i == 0){
+            soma += i;
+        }
+        
+    }
+    
+    if(valor == soma){
+        printf("Ele é perfeito");
+    }else{
+        printf("Eles não é perfeito");
+    }
+}
   
 /*59. O número e (número de Euler) pode ser representado e calculado por meio da utilização da série de Taylor para e quando x=1, como a soma da 
 seguinte série infinita: 𝑒 = 1 + (1/1!) + (1/2!) + (1/3!) + ... + (1/n!) Escreva um programa, que leia o número de termos da série (n) e imprima
