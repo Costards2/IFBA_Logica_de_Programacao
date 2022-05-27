@@ -341,6 +341,7 @@ else if ((exameI >= 70 && exameII >= 70) && (exameIII >= 70 || exameIV >= 70)) {
 else {
  printf("Reprovado");
 }
+
 /*41. Escreva um programa que imprima todos os números inteiros do intervalo fechado de 1 a 
 100.*/
 int main()
@@ -370,6 +371,7 @@ int main()
     for( numero = 1; numero<=100; numero++)
        printf("%i ", numero);
 }
+
 /*42. Escreva um programa que imprima todos os números inteiros de 100 a 1 (em ordem 
 decrescente).*/
 int main(){
@@ -480,7 +482,7 @@ int main()
 }
 
 /*48. e 49. Escreva um programa que determine se um dado número N (digitado pelo usuário) é 
-primo ou não.
+primo ou não.*/
 int main()
 {
     int i;
@@ -528,27 +530,6 @@ int main()
         printf("O número não é primo");
     }
 }
-  
-/*59. O número e (número de Euler) pode ser representado e calculado por meio da utilização da série de Taylor para e quando x=1, como a soma da 
-seguinte série infinita: 𝑒 = 1 + (1/1!) + (1/2!) + (1/3!) + ... + (1/n!) Escreva um programa, que leia o número de termos da série (n) e imprima
-como saída, o cálculo do número de Euler para cada um dos n primeiros elementos da série.*/
-int main()
-{
-    int i;
-    int valor ;
-    int fatorial = 1;
-    float euler = 1.0;
-    
-    printf("Digite o número de entrada: \n");
-    scanf("%d", &valor);
-    
-    for(i = 1 ; i <= valor; i++){
-      euler = euler +  1.0/ (fatorial = fatorial * i);
-    }
-    
-
-    printf(" Resultado de Euler = %f", euler);
-}
 
 /*50. Escreva um programa que leia um valor e imprima todas as possíveis combinações em 
 que o lançamento de um par de dados tenha como resultado da soma dos valores dos 
@@ -589,6 +570,116 @@ for(dado1= 1; dado1 <= 6; dado1++)
         printf("Dado 2 = %i\n", dado2);
         }
 }
+
+/*51. A série de Fibonacci é formada pela sequencia: 
+• 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ... 
+Escreva um programa que gere a série de FIBONACCI até o N-ésimo termo (com N 
+sendo uma entrada do algoritmo).*/
+
+/*52. A série de FETUCCINE é gerada da seguinte forma: os dois primeiros termos são 
+fornecidos pelo usuário; a partir daí, os termos são gerados com a soma ou subtração dos 
+dois termos anteriores, ou seja:
+1. Ai = Ai-1 + Ai-2, para i ímpar
+2. Ai = Ai-1 - Ai-2, para i par
+Criar um algoritmo em PORTUGOL que imprima os N primeiros termos da série de
+FETUCCINE, sabendo-se que para existir esta série serão necessários pelo menos três 
+termos.*/
+
+/*53. Dado um país A, com 5.000.000 de habitantes e uma taxa de natalidade de 3% ao ano, e
+um país B com 7.000.000 de habitantes e uma taxa de natalidade de 2% ao ano, escreva
+um programa, que imprima o tempo necessário para que a população do país A ultrapasse 
+a população do país B.*/
+int main()
+{
+   float A = 5000000;
+   float B = 7000000;
+   int i;
+   
+   for(i = 1; A <= B; i++){
+       A = A + ( A * 0.03);
+       B = B + ( B * 0.02);
+    }
+    printf("O tempo necessario sera de %i anos", i); /*36*/
+}
+/*54. Construa um programa que receba um número e verifique se ele é um número triangular. 
+(Um número é triangular quando é resultado do produto de três números consecutivos. 
+Exemplo: 24 = 2 x 3 x 4)*/
+int main()
+{
+     int i;
+    int valor, teste;
+    
+    printf("Digite o valor máximo da sua sequencia: \n");
+    scanf("%d", &valor);
+
+    for (i = 1 ; i <= valor; i++){
+        teste = i * (i+1) * (i+2);
+        if( valor == teste){
+           break;
+        }
+    }
+    
+    if (valor == teste){
+        printf("O número é triângular");
+    } else {
+        printf("O número não é triângular");
+    }
+}
+/*Outra forma*/
+  int main()
+{
+    int num;
+    int i = 1;
+    int calculo;
+    int resultado;
+    
+    printf("Digite o número que você quer verificar: \n");
+    scanf("%i", &num);
+    
+    resultado = i * (i + 1) * (i + 2);
+    
+    while(resultado < num){
+        i++;
+        resultado = i * (i + 1) * (i + 2);
+        
+    }
+        if(resultado == num){
+        printf("O número é triângular");
+        } else {
+        printf("O número não é triângular");
+            }
+}
+/*55. Dizemos que dois números são amigos se cada um deles é igual a soma dos divisores 
+próprios do outro. Os divisores próprios de um número positivo N são todos os divisores 
+inteiros positivos de N exceto o próprio N. Um exemplo de números amigos são 284 e 
+220, pois os divisores próprios de 220 são 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 e 110. 
+Efetuando a soma destes números obtemos o resultado 284 (1 + 2 + 4 + 5 + 10 + 11 + 20 
++ 22 + 44 + 55 + 110 = 284). Os divisores próprios de 284 são 1, 2, 4, 71 e 142, 
+efetuando a soma destes números obtemos o resultado 220 (1 + 2 + 4 + 71 + 142 = 220). 
+Escreva um programa que dado dois inteiros, verifique se eles são amigos. (17296 e 
+18416 são amigos, por exemplo).*/
+  
+/*59. O número e (número de Euler) pode ser representado e calculado por meio da utilização da série de Taylor para e quando x=1, como a soma da 
+seguinte série infinita: 𝑒 = 1 + (1/1!) + (1/2!) + (1/3!) + ... + (1/n!) Escreva um programa, que leia o número de termos da série (n) e imprima
+como saída, o cálculo do número de Euler para cada um dos n primeiros elementos da série.*/
+int main()
+{
+    int i;
+    int valor ;
+    int fatorial = 1;
+    float euler = 1.0;
+    
+    printf("Digite o número de entrada: \n");
+    scanf("%d", &valor);
+    
+    for(i = 1 ; i <= valor; i++){
+      euler = euler +  1.0/ (fatorial = fatorial * i);
+    }
+    
+
+    printf(" Resultado de Euler = %f", euler);
+}
+  
 /* Questão de votos em sala*/
   int main()
 {
