@@ -1292,7 +1292,29 @@ igual à 6 (1 + 2 + 3 = 6). Outro exemplo é o número 28, cujos divisores próp
         printf("Eles não é perfeito");
     }
 }
-  
+
+/*57. Sendo 𝑆 = 1 + (1/2^2) + (1/3^3) + (1/4^4) + (1/5^5) + ... + (1/N^n) +, um somatório de N (informado pelo usuário) termos, escreva um programa para
+calcular S para um número N.*/
+int main()
+{
+    int N;
+    int i;
+    float resultado /*= 0.0*/;
+    
+    printf("Digite o N: ");
+    scanf("%i", &N);
+    
+   
+    for(i = 1; i <= N; i++){
+        resultado += 1.0 / (i * i);
+    }
+    
+    printf("Se resultado é : %f ", resultado);
+}
+
+/*58. O valor aproximado do número π pode ser calculado usando-se a série 𝑆 = 1 − (1/3^3) + (1/5^3) - (1/7^3) + (1/9^3) ... Faça um programa que
+calcule e imprima o valor de π usando os N primeiros termos da série (N sendo informado durante a execução do algoritmo).*/
+
 /*59. O número e (número de Euler) pode ser representado e calculado por meio da utilização da série de Taylor para e quando x=1, como a soma da 
 seguinte série infinita: 𝑒 = 1 + (1/1!) + (1/2!) + (1/3!) + ... + (1/n!) Escreva um programa, que leia o número de termos da série (n) e imprima
 como saída, o cálculo do número de Euler para cada um dos n primeiros elementos da série.*/
