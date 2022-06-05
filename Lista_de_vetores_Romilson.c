@@ -178,4 +178,48 @@ pessoas, e que calcule e mostre:
 b. A médias das idades das pessoas com altura inferior a 1,50 m; 
 c. A porcentagem de pessoas com olhos azuis entre todas as pessoas analisadas; 
 d. A quantidade de pessoas ruivas e que não possuem olhos azuis.*/
+#define TAM 5
+    
+    int i;
+    int idade[TAM];
+    int medidade, somaidade;
+    float peso[TAM];
+    float altura[TAM];
+    char olhos[TAM];
+    float porcolhos;
+    char cabelos[TAM];
+    float a = 0, b = 0, c = 0, d = 0;
+    
+    for(i = 0; i < TAM; i++){
+        printf("Digite a idade: ");
+        scanf("%i", &idade);
+        printf("Digite a altura: ");
+        scanf("%f", &altura);
+        printf("Digite a peso: ");
+        scanf("%f", &peso);
+        printf("Digite a cor dos olhos (A-azul; P- preto; V-verde; e C-castanho): ");
+        scanf("%c", &olhos);
+        printf("Digite a cor dos cabelso (P-preto; C-castanho; L-louro; e R-ruivo): ");
+        scanf("%c", &cabelos);
+    }
+    for(i = 0; i < TAM; i++){
+        if (idade[i] > 50 && peso[i] > 50){
+            a++;
+        }
+        if(altura[i] < 1.50){
+            b++
+            somaidade += idade[i]
+            medidade = somaidade / b;
+        }
+        if(olhos[i] == 'A'){
+            c++;
+        porcolhos = c * 100 / TAM
+        }
+        if(cabelos[i] == 'C' && olhos[i] != A){
+            d++;
+        }
+        } //imcompleta
+}
+/*5 - Fazer um programa que calcule e escreva a seguinte soma: 	2^1/50 + 2^2/49 + 2^3/48 + ... + 2^50/1 */
+
 
