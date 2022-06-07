@@ -1446,6 +1446,36 @@ int main(){
     printf("%i, ", vet[i]); 
     }
 }
+/*Outra forma*/
+#include <stdio.h>
+#define TAM 15
+#define TRUE 1
+#define FALSE 0
+int main()
+{
+    int i;
+    int vetor[TAM] = {10, 2, 11, 13, 9, 4, 15, 8, 6, 14, 7, 5, 12, 3, 1};
+    int trocou, aux;
+    
+    trocou = TRUE;
+   
+    while(trocou == TRUE){
+        trocou = FALSE;
+        for(i = 0; i < TAM - 1; i++){
+            if(vetor[i] > vetor[i+1]){
+                aux = vetor[i];
+                vetor[i] = vetor[i+1];
+                vetor[i+1] = aux;
+                trocou = TRUE;
+            }
+        }
+    }
+    for (i = 0; i < TAM; i++){
+        printf("%d ", vetor[i]);
+    }
+}
+    
+
  
 
    
