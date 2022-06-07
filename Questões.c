@@ -1542,6 +1542,17 @@ int main()
 
 /*66. Faça um programa em C que copie o conteúdo de um vetor de 10 posições de inteiro em 
 um segundo vetor e imprima este último.*/
+int main()
+{
+    int vet1[10] = {18, 9, 6, 7, 16, 10, 30, 33, 39, 55};
+    int vet2[10] = {};
+    int i;
+    
+    for(i = 0; i < 10; i++){
+        vet2[i] = vet1[i];
+        printf("%i, ", vet2[i]);
+    }
+}
 	
 /*75. Escreva um programa que ordene um array de inteiros de 15 posições utilizando o 
 método da bolha (bubble sort).*/
