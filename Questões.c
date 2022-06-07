@@ -1421,7 +1421,128 @@ dão o número par.*/
 /*61. Faça um programa em C que crie e inicialize um array de 20 posições de inteiros com 0 
 para cada elemento. Imprima o vetor em seguida, indicando a posição e o valor na 
 posição (um por linha).*/
+int main()
+{
+    int vet[20] = {};
+    int i;
+    
+    for(i = 0; i < 20; i++){
+        printf("%i na posição %i\n", vet[i], i);
+    }
+}
 
+/*62. Faça um programa em C que leia um array de 10 posições e conte quantos números pares 
+são elementos do array. Imprima esta quantidade.*/
+int main()
+{
+    int vet[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int i, quantidade = 0;
+    
+    for(i = 0; i < 10; i++){
+       if(vet[i] % 2 == 0){
+           quantidade++;
+       }
+    }
+    printf("Sua quantidade é: %i", quantidade);
+}
+
+/*63. Escreva um programa que leia dois vetores de números reais de mesma dimensão (10 
+posições), e imprima o vetor resultante da soma destes vetores.*/
+/*Modo 1*/
+int main()
+{
+    int vet1[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int vet2[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int i, resultante;
+    
+    for(i = 0; i < 10; i++){
+      resultante = vet1[i] + vet2[i];
+    }
+    printf("Sua soma é: %i", resultante);
+}
+/*Modo 2*/
+int main()
+{
+    int vet1[10] = {1, 2, 3, 4, 5, 6 ,7 ,8, 9, 10}; 
+    int vet2[10] = {11, 12, 13, 14, 15, 16, 17, 18, 19, 20}; 
+    int soma1 = 0;
+    int soma2 = 0;
+    int somaTotal = 0; 
+    int i;
+    
+    for (i = 0; i < 10; i++){
+        soma1 += vet1[i];
+    }
+    for (i = 0; i < 10; i++){
+        soma2 += vet2[i];
+    }
+    
+    somaTotal = soma1 + soma2;
+    
+    printf("A soma do 1º vetor é de: %d \n", soma1);
+    printf("A soma do 2º vetor é de: %d \n", soma2);
+    printf("A soma desses 2 vetors é de: %d \n", somaTotal); 
+}
+
+/*64. Faça um programa em C que leia um array de 20 inteiros e imprima o menor e o maior 
+valor dentre os elementos do array.*/
+int main()
+{
+    int vet[20] = {18, 9, 6, 7, 16, 10, 30, 33, 39, 55, 8, 23, 11, 5 , 22, 25, 27, 3, 61, 19};
+    int i, maior = vet[0], menor = vet[0];
+    
+    for(i = 0; i < 20; i++){
+        if (vet[i] < menor){ menor = vet[i];}
+        if (vet[i] > maior){ maior = vet[i];}
+    }
+    printf("Seu maior valor é: %i\nSeu menor valor é: %i", maior, menor);
+}
+/*OBS: Você pode fazer um Bubble Sort e pegar vet[0] e vet[19]*/
+
+/*65. Faça um programa em C que leia um array de 20 inteiros e imprima o menor e o maior 
+valor dentre os elementos do array, bem como suas respectivas posições.*/
+int main()
+{
+    int vet[20] = {18, 9, 6, 7, 16, 10, 30, 33, 39, 55, 8, 23, 11, 5 , 22, 25, 27, 3, 61, 19};
+    int i, j, maior = vet[0], menor = vet[0], posicaomaior, posicaomenor;
+    
+    for(i = 0; i < 20; i++){
+        if (vet[i] < menor){ 
+            menor = vet[i];
+            posicaomenor = i;
+        }
+        if (vet[i] > maior){
+            maior = vet[i];
+            posicaomaior = i;
+        }
+    }
+     printf("Seu maior valor é: %i na posição: %i\nSeu menor valor é: %i na posição: %i", maior, posicaomaior, menor, posicaomenor);
+}
+/*Complicação que eu fiz ( Mas ainda sim funciona)*/
+int main()
+{
+    int vet[20] = {18, 9, 6, 7, 16, 10, 30, 33, 39, 55, 8, 23, 11, 5 , 22, 25, 27, 3, 61, 19};
+    int i, j, maior = vet[0], menor = vet[0], posicaomaior, posicaomenor;
+    
+    for(i = 0; i < 20; i++){
+        if (vet[i] < menor){ 
+            menor = vet[i];
+            posicaomenor = i;
+        }
+    }
+    for(j = 0; j < 20; j++){
+        if (vet[j] > maior){
+            maior = vet[j];
+            posicaomaior = j;
+        }
+    }
+    
+    printf("Seu maior valor é: %i na posição: %i\nSeu menor valor é: %i na posição: %i", maior, posicaomaior, menor, posicaomenor);
+}
+
+/*66. Faça um programa em C que copie o conteúdo de um vetor de 10 posições de inteiro em 
+um segundo vetor e imprima este último.*/
+	
 /*75. Escreva um programa que ordene um array de inteiros de 15 posições utilizando o 
 método da bolha (bubble sort).*/
 int main(){
