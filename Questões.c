@@ -1421,6 +1421,31 @@ dão o número par.*/
 /*61. Faça um programa em C que crie e inicialize um array de 20 posições de inteiros com 0 
 para cada elemento. Imprima o vetor em seguida, indicando a posição e o valor na 
 posição (um por linha).*/
+
+/*75. Escreva um programa que ordene um array de inteiros de 15 posições utilizando o 
+método da bolha (bubble sort).*/
+int main(){
+    
+    int i;
+    int vet[15] = {10, 2, 11, 13, 9, 4, 15, 8, 6, 14, 7, 5, 12, 3, 1};
+    int trocou, aux;
+    trocou = 0;
+    
+    while(trocou == 0){
+    trocou = 1;
+        for(i = 0; i < 15; i++){
+            if(vet[i] > vet[i+1]){
+                aux = vet[i];
+                vet[i] = vet[i+1];
+                vet[i+1] = aux;
+                trocou =0;
+            }
+        }
+    }
+    for(i = 0; i < 15; i++){
+    printf("%i, ", vet[i]); 
+    }
+}
  
 
    
