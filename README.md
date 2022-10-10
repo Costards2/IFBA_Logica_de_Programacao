@@ -1,2 +1,2 @@
 # IFBA-L-gica-de-Programa-o
-Codes that I did to train! 
+Codes that I managed to do while studying ADS at IFBA. 
